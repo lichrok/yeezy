@@ -1,0 +1,45 @@
+@import 'variables.scss';
+@import 'colors.scss';
+@import "slider.scss";
+@import 'left-component.scss';
+@import 'right-component.scss';
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    position: absolute;
+    z-index: 12;
+    top: $verticalSpace;
+    left: $horizontalSpace;
+    right: $horizontalSpace;
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+
+    &-share {
+        display: flex;
+        align-items: center;
+    }
+
+    &-icon {
+        width: 15px;
+        height: 15px;
+        margin-left: 50px;
+        fill: $white;
+    }
+}
+
+.logo {
+    letter-spacing: 4px;
+}

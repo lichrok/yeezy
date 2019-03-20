@@ -1,0 +1,91 @@
+.background {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    background-image: url('../img/cameron-barnes-1200022-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 80%;
+}
+
+.toggle-view-btn {
+    position: absolute;
+    left: -40px;
+    bottom: $verticalSpace;
+    transform: translateY(20px);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: $blue;
+    color: $white;
+}
+
+.liked {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto $horizontalSpace $verticalSpace;
+
+    & > * {
+        opacity: 0;
+    }
+
+    &-icon {
+        margin-right: 15px;
+        padding: 13px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: scale(1.1);
+        opacity: 0;
+        width: 40px;
+        height: 40px;
+        fill: $red;
+        background-color: $white;
+    }
+
+    &-title {
+        margin-right: 15px;
+        font-size: 12px;
+        font-weight: 700;
+        color: $gray;
+    }
+
+    &-line {
+        margin-right: 15px;
+        width: 30px;
+        height: 1px;
+        background-color: $gray;
+    }
+
+    &-person {
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $gray;
+        border-radius: 50%;
+
+        &:last-of-type {
+            margin-right: 15px;
+        }
+
+        &.is-active {
+            border-color: $blue;
+        }
+    }
+
+    &-more {
+        padding: 10px;
+        line-height: 9px;
+        border-radius: 50%;
+        background-color: $blue;
+        color: $white;
+    }
+}

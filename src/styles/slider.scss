@@ -1,0 +1,87 @@
+$navigationBtnSize: 50px;
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: $dark-gray;
+
+    &-container {
+        position: relative;
+        width: 80%;
+        height: 100%;
+    }
+
+    &-item {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &-img {
+        position: relative;
+        top: -20%;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-slice {
+        position: relative;
+        width: calc(100% / 3);
+        height: 100%;
+        float: left;
+        overflow: hidden;
+    }
+
+    &-slice-imageContainer {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+    }
+}
+
+.slider-slice:nth-of-type(1) img {
+    left: 0;
+}
+
+.slider-slice:nth-of-type(2) img {
+    left: -100%;
+}
+
+.slider-slice:nth-of-type(3) img {
+    left: calc(-100% * 2);
+}
+
+.navigation {
+    position: absolute;
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: $navigationBtnSize;
+    height: $navigationBtnSize;
+    border-radius: 50%;
+    border: 1px solid rgba($white, 0.4);
+    background-color: rgba($black, 0.2);
+    cursor: pointer;
+    outline: none;
+
+    &-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    &-prev {
+        left: $horizontalSpace;
+        bottom: $verticalSpace;
+    }
+
+    &-next {
+        margin-left: 20px;
+        left: $horizontalSpace + $navigationBtnSize;
+        bottom: $verticalSpace;
+    }
+}

@@ -1,0 +1,43 @@
+.text-container {
+    position: absolute;
+    z-index: 12;
+    top: 50%;
+    left: $horizontalSpace;
+    max-width: 600px;
+    color: $white;
+
+    .subtitle {
+        font-size: 50px;
+        font-weight: 100;
+        overflow: hidden;
+
+        span {
+            display: block;
+        }
+    }
+
+    .title {
+        margin-bottom: 20px;
+        font-size: 50px;
+        font-weight: 700;
+        overflow: hidden;
+
+        span {
+            display: block;
+        }
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $white;
+
+        &-icon {
+            margin-left: 30px;
+            width: 20px;
+            height: 20px;
+            fill: $white;
+        }
+    }
+}
